@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>La ragazza del futuro</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      /* Background image */
+      background: url("cover.jpg") no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5); /* semi-transparent black */
+      z-index: 0;
+    }
+
+    /* Content sits above overlay */
+    .content {
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 4em;
+      letter-spacing: 3px;
+      text-shadow: 0 0 25px rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 15px #fff, 0 0 30px #b084f5; }
+      to   { text-shadow: 0 0 30px #fff, 0 0 60px #e5c1ff; }
+    }
+
+    p {
+      font-size: 1.3em;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .spotify-link {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 1.2em;
+      border-radius: 50px;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, #1DB954, #1ed760);
+      box-shadow: 0 0 25px rgba(29,185,84,0.7);
+      transition: all 0.3s ease;
+    }
+
+    .spotify-link:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px rgba(29,185,84,1);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9em;
+      color: #ccc;
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>La ragazza del futuro</h1>
+    <p>Welcome to my world. A glimpse of tomorrow, through art, music, and imagination. 🌌</p>
+    <a href="https://open.spotify.com/user/0gd5a79r68w5keqopr1zjd3jd?si=1a5311a9ebe44a6c" 
+       target="_blank" class="spotify-link">
+       🎵 Listen on Spotify
+    </a>
+  </div>
+
+  <footer>
+    © 2025 La ragazza del futuro · All rights reserved
+  </footer>
+</body>
+</html>
